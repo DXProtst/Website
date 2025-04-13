@@ -1,0 +1,230 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 通用样式 */
+body {
+    font-family: 'Arial', 'Microsoft Yahei', sans-serif; /* 添加中文字体支持 */
+    line-height: 1.6;
+    align-items: center; /* 使内容水平居中 */
+    background-color: #004c6d;
+}
+
+/* 导航栏样式 */
+nav {
+    background-color: #004c6d;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 允许导航项换行 */
+}
+
+nav li {
+    margin: 0.5em; /* 调整间距以适应小屏幕 */
+}
+
+nav a {
+    color: #fff;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background 0.3s ease; /* 添加过渡效果 */
+}
+
+nav a:hover {
+    background: linear-gradient(45deg, #0066cc, #33ccff); /* 渐变效果 */
+}
+
+/* 标题部分样式 */
+header {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 5em 0;
+    background: url('LOGO.png') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%; /* 使header宽度为100% */
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    position: relative;
+    z-index: 1; /* 确保标题文字在背景图片之上 */
+}
+
+/* 各部分通用样式 */
+section {
+    padding: 2em;
+    text-align: center;
+    width: 100%; /* 确保section宽度为100% */
+    box-sizing: border-box;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* 背景和颜色样式 */
+.bg-light {
+    background-color: #e8e8e8;
+}
+
+.bg-light p {
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.bg-dark {
+    background-color: #004c6d;
+    color: white;
+}
+
+.bg-dark a {
+    color: #66ccff;
+}
+
+/* 图片样式 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 视频样式 */
+video {
+    margin-top: 1em;
+    width: 100%; /* 使视频在小屏幕上自适应 */
+    max-width: 960px; /* 限制视频最大宽度 */
+    height: auto; /* 保持视频比例 */
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #004c6d;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+textarea {
+    resize: vertical;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* 包含padding和border在width中 */
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    align-self: center; /* 使按钮居中 */
+}
+
+button:hover {
+    background: #555;
+}
+
+#messages {
+    background: #0070a0;
+    padding: 1rem;
+    border: 1px solid #0070a0;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px; /* 限制消息框的最大宽度 */
+    max-height: 400px;
+    overflow-y: auto;
+    box-sizing: border-box; /* 包含padding和border在width中 */
+    margin-top: 1rem;
+}
+
+.message {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    text-align: left; /* 使消息文本靠左 */
+    margin-bottom: 1rem; /* 添加消息之间的间隔 */
+    background-color: #ffffff; /* 为每条消息添加背景颜色 */
+    border-radius: 5px; /* 为每条消息添加圆角 */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* 为每条消息添加阴影 */
+}
+
+.message:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.username {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    color: #000000;
+}
+
+.timestamp {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 0.2rem;
+}
+
+.message-content {
+    margin: 0.5rem 0;
+    color: #000000;
+}
+
+/* 调整发送消息表单样式 */
+#messageForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 使表单内容居中 */
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 600px; /* 限制表单的最大宽度 */
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+    header {
+        padding: 2em 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 0.5em 0;
+    }
+}
