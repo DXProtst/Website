@@ -16,3 +16,5 @@ CREATE TABLE messages (
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+Plus:The video in my original website didn't upload in the main files,and also woundn't upload in release versions. 
